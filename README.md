@@ -23,7 +23,8 @@ A simple and responsive web application for managing contacts. This system allow
    ```bash
    git clone https://github.com/ankit-yadav9988/Contact-Management-System.git
 2. Open the index.html file in a web browser to use the Contact Management System.
-How It Works
+## How It Works
+
 **Add Contact:** The "Add Contact" form allows users to input the contact's details. When submitted, the contact is saved to localStorage and displayed in the contact list.
 
 **Display Contacts:** The "Display Contacts" section shows all saved contacts. Each contact has the options to edit or delete.

@@ -24,20 +24,20 @@ A simple and responsive web application for managing contacts. This system allow
    ```bash
    git clone https://ankit-yadav9988.github.io/Contact-Management-System/
 Open the index.html file in a web browser to use the Contact Management System.
-How It Works
-Add Contact
+## How It Works
+**Add Contact**
 The "Add Contact" form allows users to input the contact's details. When submitted, the contact is saved to localStorage and displayed in the contact list.
-Display Contacts
+**Display Contacts**
 The "Display Contacts" section shows all saved contacts. Each contact has the options to edit or delete.
-Search Contacts
+**Search Contacts**
 The search bar allows users to filter the contact list by name.
-Light/Dark Mode
+**Light/Dark Mode**
 Users can toggle between light and dark mode for a personalized experience. This preference is saved in localStorage.
-Features to Implement
-Form Validation: Add additional form validation, such as checking for a valid phone number format.
-Persistent Dark Mode: Save the dark mode preference across sessions.
-Mobile Responsiveness: Further optimize the design for mobile devices.
-Screenshots
+## Features to Implement
+1. Form Validation: Add additional form validation, such as checking for a valid phone number format.
+2. Persistent Dark Mode: Save the dark mode preference across sessions.
+3. Mobile Responsiveness: Further optimize the design for mobile devices.
+## Screenshots
 ![login](https://github.com/user-attachments/assets/ad4e9d14-ae87-4768-9083-9b16e560feab)
 ![signup](https://github.com/user-attachments/assets/930f1be7-25a4-4a54-8008-399975bb4fb8)
 ![dis](https://github.com/user-attachments/assets/ca616718-cc24-4179-9076-5907df9c45a4)

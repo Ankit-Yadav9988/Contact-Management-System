@@ -37,7 +37,7 @@ Form Validation: Add additional form validation, such as checking for a valid ph
 Persistent Dark Mode: Save the dark mode preference across sessions.
 Mobile Responsiveness: Further optimize the design for mobile devices.
 Screenshots
-Login Page
+-Login Page
 ![login](https://github.com/user-attachments/assets/ad4e9d14-ae87-4768-9083-9b16e560feab)
 
 Signup Page

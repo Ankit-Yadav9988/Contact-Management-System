@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+                @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #223243;
+}
+
+.container {
+  padding: 50px;
+  border-radius: 60px;
+  border: 6px solid #fff; /* Changed border color to white */
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  max-width: 600px; /* Adjust this value based on your preference */
+}
+
+.container h1 {
+  color: #13d3da;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.container form input {
+  padding: 15px;
+  border: none;
+  width: 100%;
+  background:  #223243; /* Changed background color to white */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  color:white; /* Changed text color to dark */
+  font-weight: 600;
+  border-radius: 25px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.container form button {
+  padding: 15px;
+  border: none;
+  width: 100%;
+  background: #00dfc4;
+  color: #223243;
+  font-weight: 500;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.container form button:hover {
+  background: #00c4ac;
+}
+
+.container a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+.container form input:hover,
+.container form button:hover {
+  background: #00c4ac;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container form input {
+  font-size: 1.2em;
+}
+
+.container form button {
+  font-size: 1.2em;
+}
+
+.container form input:valid {
+  border-color: #00dfc4;
+}
+
+.container form input:invalid {
+  border-color:white;
+}
+
+.container form input[type="submit"] {
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container a {
+  font-size: 1em;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* CSS for captcha */
+.captcha {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.captcha:hover {
+    background-color: #e0e0e0;
+}
+
+#captcha-input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Contact Management System</h1>
+       
+        <form id="loginForm" action="/login" method="POST">
+            <input type="text" name="name" placeholder="Name" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+           
+            <!-- Display captcha -->
+            <div class="captcha" id="captcha-container"></div>
+            <input type="text" id="captcha-input" placeholder="Enter Captcha" required><br>
+            <a href="/forgot-password">Forgot Password?</a>
+
+            <button type="submit" id="loginBtn" onclick="login()">Login</button>
+
+        </form>
+        
+        <a href="/">Don't have an account? Sign Up here</a>
+    </div>
+    
+    <script>
+
+
+        // Function to generate random captcha
+        function generateCaptcha(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < length; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return captcha;
+        }
+
+        // Function to update captcha in the HTML
+        function updateCaptcha() {
+            const captchaContainer = document.getElementById('captcha-container');
+            const captcha = generateCaptcha(6); // Change the length of captcha as per your preference
+            captchaContainer.innerText = captcha;
+        }
+
+        // Execute this function after the page is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            updateCaptcha(); // Generate initial captcha
+            
+            // Add event listener to regenerate captcha on click
+            document.getElementById('captcha-container').addEventListener('click', updateCaptcha);
+        });
+
+        // Add event listener for form submission
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Validate captcha
+    const enteredCaptcha = document.getElementById('captcha-input').value;
+    const generatedCaptcha = document.getElementById('captcha-container').innerText;
+    if (enteredCaptcha === generatedCaptcha) {
+        // Redirect to cms.html after successful login
+        window.location.href = "\cms.html";
+    } else {
+        alert("Captcha incorrect. Please try again.");
+        // Regenerate captcha
+        updateCaptcha();
+        // Clear captcha input
+        document.getElementById('captcha-input').value = '';
+    }
+});
+
+
+
+
+    </script>
+</body>
+</html>

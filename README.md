@@ -38,10 +38,10 @@ Users can toggle between light and dark mode for a personalized experience. This
 2. Persistent Dark Mode: Save the dark mode preference across sessions.
 3. Mobile Responsiveness: Further optimize the design for mobile devices.
 ## Screenshots
-![login](https://github.com/user-attachments/assets/ad4e9d14-ae87-4768-9083-9b16e560feab)
-![signup](https://github.com/user-attachments/assets/930f1be7-25a4-4a54-8008-399975bb4fb8)
-![dis](https://github.com/user-attachments/assets/ca616718-cc24-4179-9076-5907df9c45a4)
-![add](https://github.com/user-attachments/assets/0e6b96c5-101d-4cad-a514-45ac0512cc90)
-![serch](https://github.com/user-attachments/assets/94c58b1e-8244-4693-a7b5-d6c1626a3722)
-![edit](https://github.com/user-attachments/assets/c4d95048-d43d-4b85-a842-eae21eebe13c)
+![login](https://github.com/user-attachments/assets/ad4e9d14-ae87-4768-9083-9b16e560feab) **login page**
+![signup](https://github.com/user-attachments/assets/930f1be7-25a4-4a54-8008-399975bb4fb8)**signup page**
+![dis](https://github.com/user-attachments/assets/ca616718-cc24-4179-9076-5907df9c45a4)**display page**
+![add](https://github.com/user-attachments/assets/0e6b96c5-101d-4cad-a514-45ac0512cc90)**add contact page**
+![serch](https://github.com/user-attachments/assets/94c58b1e-8244-4693-a7b5-d6c1626a3722)**search page**
+![edit](https://github.com/user-attachments/assets/c4d95048-d43d-4b85-a842-eae21eebe13c)**edit contact page**
 
